@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://menxio.github.io/clems-portfolio/sitemap.xml

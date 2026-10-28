@@ -1,0 +1,52 @@
+.screenshot { background: #493035; }
+.screenshot > img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.screenshotLabel { position: absolute; right: 14px; bottom: 13px; padding: 5px 8px; background: #211318c9; color: #fff5e8; border-radius: 5px; font-size: 8px; letter-spacing: .03em; }
+.road { background: #263d41; color: #d9e5d1; }
+.roadWindow { position: absolute; left: 10%; top: 70px; width: 80%; background: #edf0e6; color: #2d4645; border-radius: 12px; overflow: hidden; transform: rotate(-4deg); box-shadow: 12px 17px 0 #17323680; transition: transform .35s; }
+:global(.project-open):hover .roadWindow { transform: rotate(-1deg) translateY(-4px); }
+.roadToolbar { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; font-size: 6px; letter-spacing: .12em; }
+.roadToolbar > span { display: flex; align-items: center; gap: 6px; }
+.roadToolbar i { width: 4px; height: 4px; background: #6d8e69; border-radius: 50%; }
+.roadView { position: relative; height: 170px; background: #78918a; overflow: hidden; }
+.roadView svg { width: 100%; height: 100%; }
+.reviewLabel { position: absolute; top: 11px; left: 12px; font-size: 5px; letter-spacing: .1em; padding: 5px 7px; border: 1px solid #c5d6c775; color: #edf2df; border-radius: 3px; }
+.roadPipeline { display: flex; justify-content: space-between; gap: 9px; padding: 13px; font-size: 6px; }
+.roadPipeline > span + span::before { content: '→'; margin-right: 11px; opacity: .5; }
+:global(.dialog-content) .roadWindow { top: 50px; }
+:global(.dialog-content) .roadView { height: 140px; }
+.wedding { color: #6c4f43; background: #e9d9ce; }
+.invitation { position: absolute; width: 260px; height: 275px; top: 60px; left: calc(50% - 130px); display: flex; flex-direction: column; align-items: center; padding: 30px 20px; background: #fbf6ed; border: 1px solid #bda58b80; outline: 6px solid #f5eee3; outline-offset: 3px; box-shadow: 14px 15px 0 #b7a38c35; transform: rotate(-5deg); transition: transform .35s; }
+:global(.project-open):hover .invitation { transform: rotate(-2deg) translateY(-4px); }
+.invitationEyebrow { font-size: 6px; letter-spacing: .2em; }
+.invitationTitle { margin-top: 19px; font-size: 25px; text-align: center; letter-spacing: -.05em; line-height: 1.25; }
+.invitationTitle em { font-size: 30px; }
+.invitationRule { width: 40px; height: 1px; background: #b8a28b; margin-top: 17px; }
+.invitationNote { margin-top: 12px; font-size: 6px; letter-spacing: .04em; }
+.rsvpCard { position: absolute; right: -35px; bottom: 26px; display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid #a4a98b; border-radius: 10px; background: #dce0cb; color: #46533d; box-shadow: 4px 6px 0 #a6a68c30; transform: rotate(8deg); font-size: 10px; }
+.rsvpCard small { display: block; margin-top: 5px; font-size: 7px; }
+.weddingPetal { position: absolute; width: 40px; height: 65px; border-radius: 70% 10% 70% 10%; background: #d2b5a3; bottom: 30px; left: 28px; transform: rotate(-35deg); opacity: .6; }
+
+@media (max-width: 1050px) {
+  .roadWindow { top: 68px; }
+  .roadView { height: 155px; }
+}
+@media (max-width: 760px) {
+  .roadWindow { width: 86%; left: 7%; top: 58px; }
+  .roadView { height: 130px; }
+  .roadToolbar { padding: 10px; font-size: 5px; }
+  .roadPipeline { font-size: 5px; padding: 11px; gap: 5px; }
+  .roadPipeline > span + span::before { margin-right: 5px; }
+  .invitation { width: 225px; height: 250px; left: calc(50% - 112px); top: 62px; padding-top: 27px; }
+  .invitationTitle { font-size: 22px; }
+  .invitationTitle em { font-size: 26px; }
+  .rsvpCard { right: -15px; font-size: 9px; padding: 13px; }
+}
+@media (max-width: 540px) {
+  .roadWindow { width: 82%; left: 9%; top: 65px; }
+  .roadView { height: 155px; }
+  :global(.dialog-content) .roadView { height: 120px; }
+  .invitation { top: 61px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roadWindow, .invitation { transition: none; }
+}
