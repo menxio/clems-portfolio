@@ -4,7 +4,7 @@ import { Icon, type IconName } from './Icons';
 import { ProjectArt } from './ProjectArt';
 import { ProjectDialog } from './ProjectDialog';
 import { QuickAnswers } from './QuickAnswers';
-import portrait from '../images/clement.png';
+import portrait from './assets/clement-portrait.jpg';
 
 const navigation = [
   { id: 'work', label: 'Work' },
@@ -124,7 +124,7 @@ export function App() {
 
         <section className="about section container" id="about" aria-labelledby="about-title">
           <div className="section-topline"><span className="eyebrow">03 / A LITTLE ABOUT ME</span><span className="section-note">A person behind the pixels.</span></div>
-          <div className="about-layout"><div className="portrait-card"><span className="portrait-orbit" aria-hidden="true" /><img src={portrait} width="920" height="920" loading="lazy" alt="John Clement Rubiato" /><span className="portrait-note">Hello from the Philippines <Icon name="spark" size={20} /></span><span className="portrait-caption"><Icon name="pin" size={15} /> PHILIPPINES · UTC+8</span></div>
+          <div className="about-layout"><figure className="portrait-card"><div className="portrait-photo"><img src={portrait} width="2048" height="2048" loading="lazy" alt="John Clement Rubiato seated at a café" /></div><figcaption className="portrait-details"><span className="portrait-note">Hello from the Philippines <Icon name="spark" size={18} /></span><span className="portrait-caption"><Icon name="pin" size={13} /> PHILIPPINES · UTC+8</span></figcaption></figure>
             <div className="about-copy"><h2 id="about-title">Curious by nature.<br /><em>Engineer by doing.</em></h2><p>I’m John Clement Rubiato, a Software Engineer based in the Philippines. My work spans full-stack applications, system integrations, business process automation, and production troubleshooting.</p><p>From building an interface to connecting an API or untangling a workflow, I enjoy turning a practical problem into something people can use.</p><div className="education-note"><span className="eyebrow">WHERE IT STARTED</span><strong>BS in Information Technology</strong><span>Bukidnon State University · 2025</span></div></div>
           </div>
           <div className="toolbox"><div className="toolbox-heading"><h3>A flexible <em>toolbox.</em></h3><p>Tools I’ve worked with professionally.<br />The approach matters as much as the stack.</p></div><div className="skill-groups">{skillGroups.map((group) => <div className="skill-group" key={group.title}><h4>{group.title}</h4><ul>{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul></div>)}</div></div>

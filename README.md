@@ -26,6 +26,7 @@ npm run preview # Serve the production build locally
 - `src/styles.css` — responsive layout, colors, typography, and reduced-motion support.
 - `src/ProjectArt.tsx` and `src/ProjectArt.module.css` — project previews, with real screenshots and schematic illustrations labeled separately.
 - `src/assets/wedding-invitation.jpg` — screenshot captured from the public wedding invitation website.
+- `src/assets/clement-portrait.jpg` — current photo used in the About section and quick-answer avatar. Framing is controlled in CSS.
 - `src/ProjectDialog.tsx` — native modal dialogs with Escape dismissal and browser-managed focus containment/restoration.
 - `src/QuickAnswers.tsx` — guided conversation, native non-modal popover, and keyboard focus management.
 - `src/QuickAnswers.module.css` — scoped widget styles, themes, mobile layout, and reduced-motion support.

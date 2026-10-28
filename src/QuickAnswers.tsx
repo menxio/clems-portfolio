@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ToggleEvent } from 'react';
 import { Icon } from './Icons';
 import { initialQuestions, quickAnswers, type AnswerLink, type QuestionId } from './quickAnswersData';
-import portrait from '../images/clement.png';
+import portrait from './assets/clement-portrait.jpg';
 import styles from './QuickAnswers.module.css';
 
 const panelId = 'quick-answers-panel';

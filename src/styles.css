@@ -218,11 +218,13 @@ h2 em { font-size: 1.12em; letter-spacing: -.03em; }
 .about { padding-top: 110px; }
 .about .section-topline { border-top: 1px solid var(--border); padding-top: 37px; }
 .about-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; align-items: center; margin-top: 55px; }
-.portrait-card { position: relative; height: 380px; border-radius: 160px 160px 24px 24px; background: var(--portrait); display: flex; align-items: flex-end; justify-content: center; overflow: hidden; }
-.portrait-card img { position: relative; width: 310px; height: 310px; object-fit: contain; z-index: 1; margin-bottom: 28px; }
-.portrait-orbit { position: absolute; width: 440px; height: 280px; top: 65px; left: -60px; border: 1px solid var(--ink); opacity: .16; border-radius: 50%; transform: rotate(-35deg); }
-.portrait-note { position: absolute; top: 27px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 10px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 21px; }
-.portrait-caption { position: absolute; bottom: 18px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; align-items: center; font-size: 8px; letter-spacing: .13em; }
+.portrait-card { width: 100%; max-width: 400px; margin: 0; padding: 10px; border: 1px solid var(--border); border-radius: 27px; background: var(--portrait); }
+.portrait-photo { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 18px; }
+.portrait-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 55% 70%; transform: scale(1.24); transform-origin: 55% 80%; }
+.portrait-details { display: flex; flex-direction: column; gap: 9px; padding: 18px 12px 12px; }
+.portrait-note { display: flex; align-items: center; gap: 10px; font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-size: 23px; line-height: 1.25; }
+.portrait-note svg { flex-shrink: 0; }
+.portrait-caption { display: flex; gap: 6px; align-items: center; font-size: 9px; letter-spacing: .1em; color: var(--muted); }
 .about-copy h2 { font-size: clamp(34px, 3.5vw, 48px); margin-bottom: 25px; }
 .about-copy > p { color: var(--muted); font-size: 14px; line-height: 1.85; margin-bottom: 17px; }
 .education-note { display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--border); margin-top: 25px; padding-top: 19px; font-size: 12px; }
@@ -313,9 +315,7 @@ h2 em { font-size: 1.12em; letter-spacing: -.03em; }
   .ledger-heading { font-size: 23px; }
   .project-wide .project-info { padding: 26px; }
   .experience-layout, .about-layout, .toolbox { gap: 45px; }
-  .portrait-card { height: 340px; }
-  .portrait-card img { height: 270px; width: 270px; }
-  .portrait-note { font-size: 18px; }
+  .portrait-note { font-size: 21px; }
 }
 @media (max-width: 760px) {
   html { scroll-padding-top: 100px; }
@@ -387,11 +387,12 @@ h2 em { font-size: 1.12em; letter-spacing: -.03em; }
   .experience-item p { font-size: 12px; }
   .about .section-topline { padding-top: 29px; }
   .about-layout { grid-template-columns: .85fr 1.15fr; gap: 30px; margin-top: 35px; }
-  .portrait-card { height: 300px; border-radius: 120px 120px 20px 20px; }
-  .portrait-card img { height: 230px; width: 230px; }
-  .portrait-note { font-size: 15px; gap: 5px; top: 24px; }
+  .portrait-card { padding: 8px; border-radius: 23px; }
+  .portrait-photo { border-radius: 16px; }
+  .portrait-details { padding: 14px 7px 8px; }
+  .portrait-note { font-size: 18px; gap: 7px; }
   .portrait-note svg { width: 15px; }
-  .portrait-caption { font-size: 6px; }
+  .portrait-caption { font-size: 8px; }
   .about-copy h2 { font-size: 33px; margin-bottom: 20px; }
   .about-copy > p { font-size: 12px; }
   .education-note { font-size: 10px; }
@@ -481,10 +482,10 @@ h2 em { font-size: 1.12em; letter-spacing: -.03em; }
   .experience-item p { font-size: 12px; }
   .experience-icon { width: 36px; height: 36px; }
   .about-layout { grid-template-columns: 1fr; gap: 32px; }
-  .portrait-card { width: min(320px, 100%); height: 340px; margin: 0 auto; border-radius: 140px 140px 20px 20px; }
-  .portrait-card img { width: 270px; height: 270px; }
-  .portrait-note { font-size: 20px; }
-  .portrait-caption { font-size: 8px; }
+  .portrait-card { width: 100%; max-width: 360px; margin: 0 auto; }
+  .portrait-details { padding: 17px 10px 11px; }
+  .portrait-note { font-size: 23px; }
+  .portrait-caption { font-size: 9px; }
   .about-copy h2 { font-size: 39px; }
   .about-copy > p { font-size: 13px; }
   .education-note { font-size: 12px; }
