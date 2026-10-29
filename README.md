@@ -2,6 +2,8 @@
 
 A personal portfolio focused on full-stack development, integrations, and business process automation. Built with React, TypeScript, and Vite, with original CSS/SVG project illustrations, light/dark themes, and keyboard-accessible project dialogs.
 
+For continuation after a laptop reformat or in a new Codex session, read the [Codex handoff](docs/CODEX_HANDOFF.md). It covers restoration, project context, deployment, and remaining work.
+
 ## Development
 
 Use Node.js 22.12+ (Node 24 recommended).
